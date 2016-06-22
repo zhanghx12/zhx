@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>张菡筱应援网</title>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application'  %><%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div id="page-header" class="hfeed site">
+      <div class="head-container resp_full_width_menu">
+        <div class="container">
+          <div class="sixteen columns">
+            <header id="masthead" class="site-header" role="banner">
+              <div data-originalstyle="left-pos" class="header-hgroup left-pos">
+                <!-- 左上角logo -->
+                <a class="link-logo-retina" href="http://themes.fruitfulcode.com/fruitful/" title="Free WordPress responsive theme" rel="home"><img class="logo retina" src="/assets/logo.png" width="149" height="55" alt="Free WordPress responsive theme"></a>
+              </div>
+              <div data-originalstyle="right-pos" class="menu-wrapper right-pos" style="max-width: none;">
+                <nav role="navigation" class="site-navigation main-navigation">
+                  <div class="menu-all-pages-container">
+                    <!-- banner菜单开始 -->
+                    <ul class="menu">
+                      <li class="<%= 'current-menu-item' if action_name == "index" %>">
+                        <a href="/">首页</a>
+                      </li>
+                      <li>
+                        <a href="http://baike.baidu.com/link?url=Dkp3oEzJPXW4tM0BSAM5GfxRZVg__DmjNVqC1FWrdnEOf2ZLPYNq8L5WidAQ98za40395eYkOuGyVQz4ZJoh8NFD_AHEEfc0bOQpIXxhE5_">张菡筱百科</a>
+                      </li>
+                      <li>
+                        <a href="http://5sing.kugou.com/18660767/default.html">小蒸饺の日程</a>
+                      </li>
+                      <li>
+                        <a href="http://5sing.kugou.com/18660767/default.html">小蒸饺の音乐</a>
+                      </li>
+                      <li>
+                        <%= link_to_blank "小蒸饺の视频", "http://www.snh48club.com/video/member141" %>
+                        <ul class="sub-menu">
+                          <li id="menu-item-2413" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2413">
+                            <a href="http://themes.fruitfulcode.com/fruitful/shop/">Shop</a>
+                            <ul class="sub-menu">
+                              <li id="menu-item-2414" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2414">
+                                <a href="http://themes.fruitfulcode.com/fruitful/my-account/">My Account</a>
+                                <ul class="sub-menu">
+                                  <li id="menu-item-2415" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2415">
+                                    <a href="http://themes.fruitfulcode.com/fruitful/my-account/logout/">Logout</a>
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li id="menu-item-1637" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1637">
+                            <a href="http://themes.fruitfulcode.com/fruitful/blog/">Blog</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="<%= 'current-menu-item' if action_name == "time_shadow" %>">
+                          <%= link_to "时光暗纹", time_shadow_path %>
+                      </li>
+                    </ul><!-- banner菜单结束 -->
+                  </div>
+                </nav>
+              </div>
+            </header><!-- #masthead .site-header -->
+          </div>
+        </div>
+        <%= yield %>
+      </div>
+    </div>
+    <footer id="colophon" class="site-footer" role="contentinfo">
+      <div class="container">
+        <div class="sixteen columns">
+          <div class="site-info">
+            2016 All Rights Reserved 张菡筱应援网 
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

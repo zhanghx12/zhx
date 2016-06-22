@@ -1,0 +1,177 @@
+@charset "UTF-8";
+// 通用样式
+/*宽度， 最小宽度， 高度， 最小高度*/ 
+// class='w120'
+@for $i from 1 through 1200 {
+  .w#{$i} { width: #{$i}px; }
+  .h#{$i} { height: #{$i}px; }
+  .w#{$i}min {min-width: #{$i}px;}
+  .h#{$i}min {min-height: #{$i}px;}
+  .w#{$i}max {max-width: #{$i}px;}
+  .h#{$i}max {max-height: #{$i}px;}
+}
+
+/*宽度百分比*/
+// class='w90p'
+@for $i from 1 through 100 {
+  $my_percentage: percentage($i/100);
+  .w#{$i}p { width: $my_percentage; }
+  .lh#{$i} { line-height: #{$i}px; }
+}
+
+/*字体*/
+// class='f14'
+@for $i from 1 through 58 {
+  .f#{$i} { font-size: #{$i}px; }
+}
+
+.b{font-weight:bold;}
+
+
+/*位置*/
+// class='fl mt12'
+.center{margin: 0 auto;}
+.fl{ float: left; }
+.fr{ float: right; }
+.pr{position: relative;}
+.pa{position: absolute;}
+.r0{right: 0;}
+.l0{left: 0}
+@for $i from 1 through 158 {
+  .mt#{$i} { margin-top: #{$i}px; }
+  .ml#{$i} { margin-left: #{$i}px; }
+  .mr#{$i} { margin-right: #{$i}px; }
+  .mb#{$i} { margin-bottom: #{$i}px; }
+  .pt#{$i} { padding-top: #{$i}px; }
+  .pl#{$i} { padding-left: #{$i}px; }
+  .pr#{$i} { padding-right: #{$i}px; }
+  .pb#{$i} { padding-bottom: #{$i}px; }
+}
+
+.m12_0{ margin: 12px 0px;}
+.m8_0{ margin: 8px 0px;}
+.pd0_20{ padding: 0px 20px;}
+.pd0_4{ padding: 0px 4px;}
+.ti8 { text-indent: 0.8em;}
+
+/*内容位置*/
+.tc{text-align: center;}
+.tl { text-align: left; }
+.tr { text-align: right; }
+.vat { vertical-align: top;}
+.vam { vertical-align: middle; }
+.tcm{text-align: center;vertical-align:middle;}
+
+/*颜色*/
+.pink{color:#FF007E!important;}
+.gary{color:#777777!important;}
+.orange{color:orange!important;}
+.red {color: #d72727;}
+.green { color: green!important; }
+// bootstrap的绿色
+.greenb { color: #38b44a; }
+.blue { color: #0000FF!important; }
+.black { color: #000000!important; }
+.white { color: #FFFFFF!important; }
+.grey { color: grey!important;}
+.bgdd{ background-color:#EEE!important; }
+.bgred { background-color:#EC5757!important; }
+.bggrey { background-color:#FBFBFB!important; }
+.bgwhite { background-color: #ffffff!important; }
+.bg7{background-color: #f3f3f3!important;}
+// 浅橙
+.bg8{background-color:  #F5B48A!important;}
+.claretred {color:#e01800!important;}
+
+/*其他*/
+.clear{clear: both;}
+.hide { display: none; }
+.block {display: block;}
+.pointer{ cursor: pointer; }
+.cursor_default{ cursor: default; }
+.bt0 {border-top: 0px}
+.br0 {border-right: 0px}
+.bb0 {border-right: 0px}
+.b0{border: 0px;}
+.b-tn1{border-bottom: 1px solid #F5F5F5;}
+.underline {text-decoration: underline;}
+
+table.common {
+  border-collapse:collapse;
+  border-spacing:0;
+  width:100%;
+  // font-size:12px;
+
+  td, th {
+    // height: 24px;
+    margin:0;
+    padding:4px;
+    border:1px solid #ccc;
+  }      
+
+  th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+  }                                                                                                                                      
+
+  thead th {
+    margin:0;
+    padding:4px;
+    border:1px solid #ccc;
+    font-weight:bold;
+
+  }
+}
+
+th.bg {
+  background-color: #f5f5f5;
+  text-align: right;
+}
+
+th.bgc {
+  background-color: #f5f5f5;
+}
+
+th.bg_tc {
+  background-color: #f5f5f5;
+  text-align: center;
+  min-width: 150px;
+}
+
+.del {
+  text-decoration: line-through;
+}
+
+// 不自动换行
+.no_break {table-layout:fixed; word-break: break-all; overflow:hidden;}
+// 折叠鼠标样式
+.icon-chevron-up, .icon-chevron-down {cursor: pointer;}
+.my97_date{
+  width: 120px;
+}
+.my97_time{
+  width: 150px;
+}
+
+.white a:link {
+  color: white;
+}
+.white a:hover {
+  color: white;
+} 
+.white a:visited  {
+  color: white;
+}
+.art_tip_hover{
+  cursor: pointer;
+}
+
+
+label.common_label{
+  display: initial;
+  font-weight: normal;
+}
+.hint {
+  color: orange;
+}
+
